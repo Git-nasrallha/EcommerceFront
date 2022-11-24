@@ -1,0 +1,17 @@
+.home{
+    min-height: 1000px;
+    background-color: #efeaea00;
+    .home-slider{
+        margin: 20px 0;
+        .slider-image{
+            img{
+                width:100%
+            }
+        }
+    }
+    .home-filter{
+        box-shadow: 2px 2px 5px #eee,
+        -2px -2px 5px #eee;
+        padding: 20px 10px;
+    }
+}

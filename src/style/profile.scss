@@ -1,0 +1,130 @@
+.profile{
+    margin-top: 40px;
+    position: relative;
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        background-color: $mainColor;
+        color: #fff;
+    };
+    .nav-pills .nav-link{
+        transition: all .3s ease-in-out;
+        margin-bottom: 10px;
+        color: #000000;
+        font-weight: 500;
+        &:hover{
+            background-color: $mainColor;
+            color: #fff;
+        }
+    }
+    .btn-logout{
+        font-weight: 500;
+        cursor: pointer;
+        width: 100%;
+        transition: all .2s ease-in-out;
+        text-align: start;
+        &:hover{
+            border: none;
+            background-color: $mainColor;
+            color: #fff;
+        
+        }
+    }
+    .avater{
+        position: relative;
+        &:hover{
+            .upload-image{
+                width: 297px;
+                height: 50px;
+                .upload-icon{
+                    svg{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .upload-image{
+            width: 0;
+            height: 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(#000000, .5);
+            transition: all .3s ease-in-out;
+            border-radius: 0 0 5px 5px;
+            .upload-icon{
+                line-height: 50px;
+                svg{
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-size: 40px;
+                    color: #fff;
+                    transition: all .3s ease-in-out;
+                    display: none
+                };
+            }
+            input[type="file"]{
+                display: none;
+            };
+         
+        }
+        .avatar-img{
+            border: 1px solid $mainColor;
+            display: block;
+            height: 220px;
+            width: 297px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+      
+    };
+    // my info
+    .user-info{
+        h2{
+            position: relative;
+            @include headerBorder;
+        }
+    }
+    //edit user form style
+    .edit-user{
+        h3{
+            position: relative;
+            @include headerBorder;
+        }
+        .edit-user-form{
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding:40px 20px 20px;
+            width: 600px;
+            margin: 60px auto;
+            position: relative;
+            box-shadow: 2px 2px 7px #eee,
+                        -2px -2px 7px #eeee;
+                       
+            .userIcon{
+                font-size: 50px;
+                margin-bottom: 28px;
+                position: absolute;
+                top: -47px;
+                left: 46%;
+                color:$mainColor;
+            };
+            input{
+                margin-bottom: 20px;
+                border-color: $mainColor;
+            }
+            input[type="submit"]{
+                display: block;
+                margin:auto;
+                background-color: $mainColor;
+                color: #fff;
+                border-radius: 6px 0;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    color: $mainColor;
+                    background-color: #fff;
+                    border: 1px solid $mainColor;
+                    border-radius: 6px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.orders-page{
+    .order-item{
+        background-color: #fff;
+        box-shadow: 2px 2px 6px #ccc,
+        -2px -2px 6px #ccc;
+        padding: 12px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        .order-image{
+            padding-left: 15px;
+            img{
+                width: 40px;
+                height: 79px;
+            }
+        }
+        .order-name{
+            p{
+                color: #333333e0;
+                font-weight: 400;
+            }
+        }
+        .order-info{
+            p{
+                margin-bottom: 5px;
+            }
+            .order-status{
+                margin-top: 20px;
+                ul{
+                    text-transform: capitalize;
+                    li{
+                        color: #333333e0;
+                        &:first-of-type{
+                            font-weight: 500;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                display: block;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background-color: #008800a6;
+                                position: absolute;
+                                left: -15px;
+                                top: 9px;
+                            }
+                        };
+                        &:last-of-type{
+                            color: #0782f3f7;
+                        }
+                    }
+                };
+                h6{
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    position: relative;
+                    color: #333333e0;
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border: 2px solid #f2c709;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: -15px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

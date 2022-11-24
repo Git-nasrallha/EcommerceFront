@@ -1,0 +1,38 @@
+.register{
+    .photo-ecommerce{
+        height: 350px;
+        box-shadow: 4px 3px 20px #dbe5f4,
+                    -4px -3px 20px #dbe5f4;
+    }
+    .registerForm{
+        padding:20px;
+        padding-top: 40px;
+        position: relative;
+        box-shadow: 4px 3px 20px #dbe5f4,
+                    -4px -3px 20px #dbe5f4;
+        input{
+            margin-bottom: 22px;
+            border-color: $mainColor;
+        }
+        input[type="submit"],input[type="reset"]{
+            display: block;
+            background-color: $mainColor;
+            color: #fff;
+            border-radius: 6px 0;
+            transition: all .3s ease-in-out;
+            &:hover{
+                color: $mainColor;
+                background-color: #fff;
+                border: 1px solid $mainColor;
+                border-radius: 6px 0;
+            }
+        }
+        .userIcon{
+            position: absolute;
+            top: -40px;
+            left: 46%;
+            font-size: 40px;
+            color: $mainColor;
+        }
+    }
+}

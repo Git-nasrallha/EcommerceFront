@@ -1,0 +1,54 @@
+// prefix mixin
+@mixin prefix ($prop ,$val){
+    -webkit-#{$prop}:$val ;
+    -moz-#{$prop}: $val;
+    -o-#{$prop}: $val;
+};
+@mixin button {
+    @include prefix(box-sizing,border-box );
+    border: 1px solid transparent;
+   -webkit-border-radius:10px 0 10px ;
+   -moz-border-radius:5px 10px ;
+   -o-border-radius:5px 10px ;
+   background-color: $secendColor;
+   text-transform: capitalize;
+   padding: 6px 10px;
+   color: $ligtColor;
+   text-decoration: none;
+   transition: all .3s ease-in-out;
+   &:hover{
+    background-color: $mainColor;
+   }
+};
+@mixin roundButton {
+    @include prefix(box-sizing,border-box );
+    @include prefix(border-radius,50%);
+    width: 30px; height: 30px;
+    border: 1px solid $grayColor;
+    text-align: center;
+    line-height: 15px;
+    font-size: 20px;
+};
+@mixin orangeButton {
+    @include prefix(box-sizing,border-box );
+    @include prefix(border-radius,2px);
+    border: 1px solid transparent;
+    background-color: $orangeColor;
+    text-align: center;
+    text-transform: uppercase;
+    color: $ligtColor;
+    font-weight: 500;
+    padding: 12px 50px;
+};
+@mixin headerBorder {
+    &::after{
+        content: "";
+        display: block;
+        width: 150px;
+        height: 2px;
+        background-color: #055ca7;
+        position: absolute;
+        bottom: -5px;
+        left: 42%;
+    }
+};

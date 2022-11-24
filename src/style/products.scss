@@ -1,0 +1,157 @@
+.products-list{
+    .product-key{
+        text-transform: capitalize;
+        .section-header{
+            span{
+               font-weight: bold; 
+               font-size: 22px;
+               color: #2874f0;
+               text-transform: uppercase;
+            }
+        }
+        .card{
+            border: none;
+            padding: 0 20px 10px;
+            text-align: center;
+            border-radius: 0px 20px;
+            max-height: 310px;
+            transition: all .2s ease-in-out;
+            &:hover{
+                border: 1px solid #2874f0;
+            }
+            img{
+                width: 70px;
+                height: 200px;
+                display: block;
+                margin:auto
+            };
+            .card-title{
+                font-size: 12px;
+                color: #151414cf;
+                font-weight: 700;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    color: #2874f0
+                }
+            };
+            .card-text{
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+  
+};
+/*product details style*/
+.product-details{
+    margin-bottom: 50px;
+    .content-image {
+        border: 1px solid #ddd;
+        border-left: none;
+        @include prefix(border-radius,3px);
+        .related-image{
+           flex-basis: 30%;
+           text-align: center;
+           img{
+            display: block;
+            width: 50px;
+            height: 70px;
+            border: 1px solid  #ddd;
+            border-bottom: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                border:2px solid #2874f0;
+            }
+           }
+        }
+        .main-image{
+            flex-basis: 70%;
+            padding: 30px;
+            position: relative;
+            img{
+                width: 150px;
+                height: 350px
+            };
+            span{
+                width: 30px;
+                height: 30px;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 25px;
+                position: absolute;
+                top: 3px;
+                right: 25px;
+                color: #ddd;
+                cursor: pointer;
+                svg{
+                    font-size: 25px;
+                }
+            }
+        }
+    }  
+    .product-action-btn{
+        margin-left: 50px;
+        margin-top: 20px;
+        button{
+            padding: 13px 36px;
+            box-sizing: border-box;
+            font-weight: 400;
+            text-transform: capitalize;
+            border-color: transparent;
+            margin-right: 7px;
+            background-color: #ff9f00;
+        };
+        span{
+            button{
+                border-radius: 5px;
+                color: #fff;
+                padding: 13px 36px;
+                box-sizing: border-box;
+                font-weight: 400;
+                text-transform: capitalize;
+                border-color: transparent;
+                background-color: #fb641b;
+            }
+        }
+    
+    };    
+};
+/* product item style*/
+.product-item{
+    .card{
+        border: none;
+        padding: 3px 20px 7px;
+        text-align: center;
+        border-radius: 0px 20px;
+        max-height: 310px;
+        margin-bottom: 20px;
+        transition: all .2s ease-in-out;
+        box-shadow: 3px 3px 5px #ccc ,
+         -3px -3px 5px #ccc;
+        &:hover{
+            border: 1px solid #2874f0;
+        }
+        img{
+            width: 70px;
+            height: 200px;
+            display: block;
+            margin:auto
+        };
+        .card-title{
+            font-size: 12px;
+            color: #151414cf;
+            font-weight: 700;
+            transition: all .3s ease-in-out;
+            &:hover{
+                color: #2874f0
+            }
+        };
+        .card-text{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}

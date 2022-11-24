@@ -1,0 +1,207 @@
+.cart-page{
+    background-color: #f1f3f6;
+    padding: 20px;
+    .cart-items{
+        border: 1px solid #ddd;
+        @include prefix(border-radius,4px);
+        .cart-item-header{
+            background-color: $ligtColor;
+            padding: 20px 0;
+            position: relative;
+            text-transform: capitalize;
+            @include prefix(border-radius,4px 0 0 4px);
+            margin-bottom: 20px;
+            a{
+                color: #333;
+                font-size: 18px;
+            };
+            a.active{
+                color: $iconColor;
+                font-weight: bold;
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 200px;
+                    height: 2px;
+                    background-color: #2874f0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 96px;
+                }
+            }
+        };
+        .cart-item-delivery{
+            @extend .cart-item-header;
+            padding: 15px;
+            button{
+                text-transform: capitalize;
+                background-color: none !important;
+                border: 1px solid $grayColor;
+                @include prefix(border-radius,5px);
+                padding: 10px;
+                background: none;
+                color: $iconColor;
+                font-weight: 500;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    box-shadow: 1px 3px 5px $grayColor,
+                                -1px -3px 5px $grayColor;
+                }
+            }
+        };
+        .cart-item{
+            background-color: $ligtColor;
+            padding: 25px 20px;
+            .cart-item-content{
+                .card{
+                    border: none;
+                    padding: 0;
+                    .item-image{
+                        height: 150px;
+                    }
+                    .card-title{
+                        text-transform: capitalize;
+                        font-size: 15px;
+                        font-weight: 400;
+                    }
+                    .card-body{
+                        ul{
+                            li{
+                                color: #222;
+                                margin-bottom: 15px;
+                                text-transform: capitalize;
+                                font-weight: lighter;
+                                img{
+                                    width: 80px;
+                                    height: 20px;
+                                };
+                                &:last-of-type{
+                                    span{
+                                        &:first-of-type{
+                                            text-decoration: line-through;
+                                            margin-right: 10px;
+                                        }
+                                        &:last-of-type{
+                                           font-weight: bold;
+                                           color: #000;
+                                           margin-right: 10px
+                                        }
+                                    };
+                                    a{
+                                        color: #080;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .delivery{
+                margin-right: 21px;
+                margin-top: 15px;
+                font-weight: 400;
+                text-transform: capitalize;
+                font-size: 15px;
+                text-align: right;
+                span{
+                    color: #080;
+                }
+            };
+            .cart-action{
+                text-transform: capitalize;
+                .remove{
+                    border: none;
+                    color: $iconColor;
+                    background-color: transparent;
+                    font-size: 20px;
+                }
+                .increase-btn,.decrease-btn{
+                    @include roundButton;
+                };
+                input{
+                    width: 50px;
+                    margin: 0 10px;
+                    text-align: center;
+                };
+                a{
+                    text-transform: uppercase;
+                    color: #000;
+                    font-weight: 600;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        color: $iconColor;
+                    }
+                }
+            }
+        };
+        .cart-item-footer{
+            background-color: $ligtColor;
+            padding: 20px;
+            box-shadow: 2px 3px 6px $grayColor,
+                        -2px -3px 6px $grayColor;
+            display: flex;
+            justify-content: end;
+            button{
+                @include orangeButton;
+                padding: 12px 60px;
+            }
+        }
+    };
+    /*cart price style */
+    .cart-price{
+        text-transform: capitalize;
+        .card{
+            border-color: $grayColor;
+            padding: 0 12px;
+            .card-header{
+                background-color: $ligtColor;
+                margin-bottom: 10px;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 18px;
+                padding: 15px 10px;
+                color: $secendTextColor;
+            }
+            .list-group-item{
+                border: none;
+                display: flex;
+                font-size: 15px;
+                justify-content: space-between;
+                margin-bottom: 8px;
+                &:nth-of-type(4){
+                    border-top: 1px dotted $grayColor;
+                    border-bottom: 1px dotted $grayColor;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    font-weight: bold
+                };
+                &:last-of-type{
+                    color: #080;
+                    font-weight: 500;
+                    padding: 12px 0;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        };
+        .price-section-footer{
+            color: $secendTextColor;
+            span{
+                svg{
+                    font-size: 30px;
+                }
+            }
+            p{
+                font-size: 15px;
+            }
+        };
+    }
+    /*cart footer style*/
+    .cart-footer{
+        padding: 40px 40px 0;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
